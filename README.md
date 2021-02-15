@@ -177,3 +177,15 @@ then regenerate the config file with
 
 ### Broadcom Bluetooth firmware for Linux kernel
 ```yay -S broadcom-bt-firmware-git```
+
+### Firefox Hardware Acceleration
+
+install ```libva-intel-driver``` and ```libva-utils```
+
+run ```vainfo``` command and if vainfo gives a non-error output (i.e. a list of codecs it can decode and encode) you're set.
+
+install ```h264ify``` firefox extension 
+
+You can test that it's working by launching Firefox with MOZ_LOG="PlatformDecoderModule:5" - for example by running MOZ_LOG="PlatformDecoderModule:5" firefox in a terminal. While this does restrict you to x264 (and thus 1080p) on YouTube, it's great for low powered laptops etc running on battery (not so much on my Threadripper desktop system, but meh).
+
+Firefox needs launching with ```MOZ_X11_EGL=1``` and you can do this either with the launcher, or set it as an environmental variable in ```/etc/environment``` or ```.bashrc/.zshrc/whatever (export MOZ_X11_EGL=1)```.
