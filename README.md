@@ -189,3 +189,22 @@ install ```h264ify``` firefox extension
 You can test that it's working by launching Firefox with MOZ_LOG="PlatformDecoderModule:5" - for example by running MOZ_LOG="PlatformDecoderModule:5" firefox in a terminal. While this does restrict you to x264 (and thus 1080p) on YouTube, it's great for low powered laptops etc running on battery (not so much on my Threadripper desktop system, but meh).
 
 Firefox needs launching with ```MOZ_X11_EGL=1``` and you can do this either with the launcher, or set it as an environmental variable in ```/etc/environment``` or ```.bashrc/.zshrc/whatever (export MOZ_X11_EGL=1)```.
+
+Firefox ```about.config```
+
+```
+gfx.webrender.all:true
+media.ffmpeg.dmabuf-textures.enabled:true
+media.ffmpeg.vaapi.enabled:true
+media.ffvpx.enabled:false
+```
+
+Test it with ```MOZ_WEBRENDER=1 MOZ_X11_EGL=1 MOZ_LOG="PlatformDecoderModule:5" firefox 2>&1 | grep 'VA-API'``` and play a video. It either says something like
+
+```41:[Child 18537: MediaController #2]: D/PlatformDecoderModule DMA-Buf/VA-API can't be used, WebRender/DMA-Buf is disable```
+
+Then it does not work, if it dumps a lot of video encoding infos like
+
+```06:[Child 20521: MediaPDecoder #3]: D/PlatformDecoderModule DMABUF/VA-API Got one frame output with pts=21533333dts=21533333 duration=33333 opaque=-9223372036854775808```
+
+then it works.
