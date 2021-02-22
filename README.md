@@ -202,3 +202,6 @@ Then it does not work, if it dumps a lot of video encoding infos like
 ```06:[Child 20521: MediaPDecoder #3]: D/PlatformDecoderModule DMABUF/VA-API Got one frame output with pts=21533333dts=21533333 duration=33333 opaque=-9223372036854775808```
 
 then it works.
+
+### IntelliJ or other Java based apps blank screen
+add ```export _JAVA_AWT_WM_NONREPARENTING=1``` to ```.xinitrc```.
