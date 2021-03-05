@@ -1,0 +1,3 @@
+[submodule ".config/lf"]
+	path = .config/lf
+	url = https://github.com/gokcehan/lf.git
