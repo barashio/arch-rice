@@ -48,7 +48,7 @@ export SEP2="]"
 while true
 do
 
-    xsetroot -name "$(dwm_pulse)$(dwm_battery)$(dwm_resources)$(dwm_date)"
+    xsetroot -name "$(dwm_countdown)$(dwm_pulse)$(dwm_battery)$(dwm_resources)$(dwm_date)"
     sleep 1
 
 done
