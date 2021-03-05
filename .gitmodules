@@ -1,6 +1,6 @@
 [submodule ".config/lf"]
 	path = .config/lf
-	url = https://github.com/gokcehan/lf.git
+	url = https://github.com/gokcehan/lf
 
 [submodule ".config/suckless/countdown"]
 	path = .config/suckless/countdown
