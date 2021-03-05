@@ -5,3 +5,6 @@
 [submodule ".config/suckless/countdown"]
 	path = .config/suckless/countdown
 	url = https://github.com/joestandring/countdown
+[submodule ".config/herbe"]
+	path = .config/herbe
+	url = https://github.com/dudik/herbe
