@@ -4,10 +4,12 @@
 
 [submodule ".config/suckless/countdown"]
 	path = .config/suckless/countdown
-	url = https://github.com/joestandring/countdown
+	url = https://github.com/barashio/countdown
+
 [submodule ".config/herbe"]
 	path = .config/herbe
 	url = https://github.com/dudik/herbe
+
 [submodule ".config/suckless/dwm-bar"]
 	path = .config/suckless/dwm-bar
 	url = https://github.com/barashio/dwm-bar
