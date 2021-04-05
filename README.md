@@ -1,4 +1,4 @@
-# arch-rice
+# dotfiles
 
 Arch Linux Setup for Lenovo Thinkpad X230
 
