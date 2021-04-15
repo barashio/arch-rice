@@ -1,5 +1,7 @@
 # dotfiles
 
+Node: Since I switched to Artix Linux, some of the configurations used are no longer needed because Artix does not have systemd. I leave the notes here so that it can be used by someone that uses Arch.
+
 ### Backlight Control
 inside ```/etc/default/grub```, append ```GRUB_CMDLINE_LINUX_DEFAULT="acpi_osi='!Windows 2012'"```.
 
